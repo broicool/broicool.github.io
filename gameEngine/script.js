@@ -1,15 +1,7 @@
-const button1 = {
-    id : "button1",
-    y : 150,
-    x : 150,
-    click : "",
-    text : "Button Test",
+var c = document.getElementById("gameCanvas");
+const gameEngine = {
+    setUpCanvas : function(w,h) {
+        c.width = w;
+        c.height = h;
+    }
 }
-function button(buttonObject){
-    return '<button id="'+buttonObject.id+'" class = "objectMoveable" style="top:'+buttonObject.y+'px; left:'+buttonObject.x+'px;" onClick="'+buttonObject.click+'">'+buttonObject.text+'</button>'
-}
-function addToCanvas(object){
-    document.getElementById("canvas").innerHTML += object;
-}
-
-addToCanvas(button(button1));
